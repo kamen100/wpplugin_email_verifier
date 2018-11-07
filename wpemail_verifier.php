@@ -49,9 +49,32 @@ function wpplugin_verifier_options_page(){
 if (!current_user_can('manage_options')){
   wp_die( __('You do not have permissions'));
 }
+global $plugin_url;
+
+if(isset($_POST['adddomain_form_submitted'])){
+  $hidden_field= esc_html($_POST['adddomain_form_submitted']);
+  if ($hidden_field=='Y'){
+    $adddomain=esc_html($_POST['adddomain']);
+    echo $adddomain;
+  }
+}
   require('options-page-wraper.php');
 }
 
+
+
+
+// function validate_email_domain(){
+//
+// }
+
+// add_action('registration_errors', 'validate_email_domain', 10, 3);
+// function validate_email_domain( $errors, $login, $email ) {
+//     if ( is_email($email) and  substr($email, -3) != 'edu' ) {
+//         $errors->add('email_domain', __('ERROR: You may only register with a .edu email address.'));
+//     }
+//     return $errors;
+// }
 
 
 

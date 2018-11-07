@@ -24,8 +24,23 @@
 						</h2>
 
 						<div class="inside">
-							<p><?php esc_attr_e( 'Email spam control.',
-							                     'WpAdminStyle' ); ?></p>
+							<!-- <p><?php //esc_attr_e( 'Email spam control.', 'WpAdminStyle' ); ?></p> -->
+                                   <!-- Insert table  -->
+              <!-- <h2><?php //esc_attr_e( 'Tables', 'WpAdminStyle' ); ?></h2> -->
+<form method="POST" action="" name="adddomain_restrict_form">
+  <input type="hidden" name="adddomain_form_submitted" value="Y">
+                <table class="form-table">
+                <tr valign="top">
+                 <label for="adddomain">
+                   <td scope="row"><?php esc_attr_e('Add domain', 'WpAdminStyle'); ?> </td>
+                 </label>
+                 <td scope="row"><input type="text" name="adddomain" id="adddomain" value="" class="regular-text" /><br></td>
+                </tr>
+                </table>
+                <input class="button-primary" type="submit" name="adddomain_submit" value="save" />
+              </form>
+<br class="clear" />
+                                   <!-- end of insert -->
 						</div>
 						<!-- .inside -->
 
