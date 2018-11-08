@@ -61,6 +61,15 @@ if(isset($_POST['adddomain_form_submitted'])){
   require('options-page-wraper.php');
 }
 
+// Function for add options
+function wpplugin_verifier_options(){
+
+          add_option('wpplugin_verifier_options', 'Plugin options');
+// update_option('wpplugin_verifier_options', 'New Plugin options');
+// delete_option('wpplugin_verifier_options');
+
+}
+add_action('admin_init', 'wpplugin_verifier_options');
 
 
 
